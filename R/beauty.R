@@ -2,7 +2,7 @@
 
 
 
-gradient <- function(element = "body", direction = "right", gradName = "LIFE", txtColor = "#272822", reverse = F) {
+beauty <- function(element = "body", direction = "right", colorName = "LIFE", txtColor = "#272822", reverse = F) {
 
 
     direction <- switch( direction,
@@ -19,7 +19,7 @@ gradient <- function(element = "body", direction = "right", gradName = "LIFE", t
 
 
     # names ---------------------
-    gradName <- switch(gradName,
+    colorName <- switch(colorName,
       "LIFE" = c("#52ff75, #3ce312"),
       "PINK" = c("#f787ff, #f45cff"),
       "TEAL" = c("#52ffd7, #10e3ca"),
@@ -465,10 +465,12 @@ gradient <- function(element = "body", direction = "right", gradName = "LIFE", t
 
 
 
+
+
     # CSS part ------------------------------------
     htmltools::tags$head(htmltools::tags$style(htmltools::HTML(
       glue::glue(
-        "{element}{{background: linear-gradient({direction},{gradName});color:{txtColor}}}"
+        "{element}{{background: linear-gradient({direction},{colorName});color:{txtColor}}}"
       )
     )))
 
