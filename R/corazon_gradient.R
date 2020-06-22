@@ -18,15 +18,40 @@
 
 #' Display a linear gradient color within shiny elements
 #'
-#' @param element in which shiny element should the corazon_gradient function be applied ? Defaults to "body"
+#' @param element the shiny element that will incorporate the gradient color ? Defaults to "body"
 #' @param direction the direction of the gradient, between "right", "left", "bottom", "top". Defaults to "right"
-#' @param colorName the name of the gradient to apply. see <https://www.colorffy.com/gradients/catalog>
+#' @param colorName the name of the gradient color to apply. see <https://www.colorffy.com/gradients/catalog>
 #' @param txtColor the text color. Default to "#F2F2F2" (white)
 #'
 #' @return A linear gradient color applied on a specific shiny element
 #' @export
 #'
 #' @examples
+#'
+#'if(interactive()){
+#'
+#'ui <- fluidPage(
+#'
+#'
+#'corazon_gradient(txtColor = "blue"),
+#'
+#'
+#'h1("This is a Title"),
+#'
+#')
+#'
+#'server <- function(input, output) {
+#'
+#'}
+#'
+#'# Run the application
+#'
+#'
+#'shinyApp(ui = ui, server = server)
+#'
+#'}
+#'
+#'
 #'
 #'
 

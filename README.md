@@ -3,19 +3,19 @@
 
 # corazon
 
-<!-- badges: start -->
-
-<!-- badges: end -->
-
-The goal of corazon is to …
+`corazon` allows you to incorporate easily
+[colorffy](https://www.colorffy.com/gradients/catalog) gradient colors
+within Shiny elements.
 
 ## Installation
 
-You can install the released version of corazon from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the development version of `corazon` from Github with:
 
 ``` r
-install.packages("corazon")
+
+install.packages("remotes")  # If not installed 
+
+remotes::install_github("feddelegrand7/corazon")
 ```
 
 ## Example

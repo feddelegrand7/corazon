@@ -15,18 +15,24 @@ knitr::opts_chunk$set(
 
 # corazon
 
-<!-- badges: start -->
-<!-- badges: end -->
+`corazon` allows you to incorporate easily [colorffy](https://www.colorffy.com/gradients/catalog) gradient colors within Shiny elements. 
 
-The goal of corazon is to ...
 
 ## Installation
 
-You can install the released version of corazon from [CRAN](https://CRAN.R-project.org) with:
+You can install the development version of `corazon` from Github with: 
 
-``` r
-install.packages("corazon")
+```{r, eval=FALSE}
+
+install.packages("remotes")  # If not installed 
+
+remotes::install_github("feddelegrand7/corazon")
+
+
+
 ```
+
+
 
 ## Example
 

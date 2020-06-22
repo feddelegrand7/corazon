@@ -12,11 +12,11 @@ corazon_gradient(
 )
 }
 \arguments{
-\item{element}{in which shiny element should the corazon_gradient function be applied ? Defaults to "body"}
+\item{element}{the shiny element that will incorporate the gradient color ? Defaults to "body"}
 
 \item{direction}{the direction of the gradient, between "right", "left", "bottom", "top". Defaults to "right"}
 
-\item{colorName}{the name of the gradient to apply. see \url{https://www.colorffy.com/gradients/catalog}}
+\item{colorName}{the name of the gradient color to apply. see \url{https://www.colorffy.com/gradients/catalog}}
 
 \item{txtColor}{the text color. Default to "#F2F2F2" (white)}
 }
@@ -27,6 +27,31 @@ A linear gradient color applied on a specific shiny element
 Display a linear gradient color within shiny elements
 }
 \examples{
+
+if(interactive()){
+
+ui <- fluidPage(
+
+
+corazon_gradient(txtColor = "blue"),
+
+
+h1("This is a Title"),
+
+)
+
+server <- function(input, output) {
+
+}
+
+# Run the application
+
+
+shinyApp(ui = ui, server = server)
+
+}
+
+
 
 
 }
