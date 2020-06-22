@@ -9,6 +9,8 @@ within Shiny elements.
 
 ![](man/figures/corazon.jpg)
 
+![](man/figures/corazon2.png)
+
 ## Installation
 
 You can install the development version of `corazon` from Github with:
