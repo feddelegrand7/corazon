@@ -7,6 +7,8 @@
 [colorffy](https://www.colorffy.com/gradients/catalog) gradient colors
 within Shiny elements.
 
+![](man/figures/corazon.jpg)
+
 ## Installation
 
 You can install the development version of `corazon` from Github with:
