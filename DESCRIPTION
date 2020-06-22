@@ -11,7 +11,7 @@ Authors@R:
              email = "Haned.hadjer.enssea@gmaail.com", 
              role = c("ctb")))
 Description: Allows the user to apply nice color gradients to 'shiny' elements.
-    The gradients are extracted from the 'colorffy' website. See <https://www.colorffy.com/gradients/catalog>
+    The gradients are extracted from the 'colorffy' website. See <https://www.colorffy.com/gradients/catalog>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
