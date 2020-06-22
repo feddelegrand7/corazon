@@ -6,7 +6,7 @@
 #'
 #'@format A data frame containing all the the gradient colors:
 #'\itemize{
-#'   \item G_Name: the name of the gradients as displayed within the colorffy website.
+#'   \item g_name: the name of the gradients as displayed within the colorffy website.
 #'   \item hex1: the first hex color code
 #'   \item hex2: the second hex color code
 #'   \item hex3: the third hex color code
@@ -16,17 +16,31 @@
 
 
 
+#' Display a linear gradient color within shiny elements
+#'
+#' @param element
+#' @param direction
+#' @param colorName
+#' @param txtColor
+#' @param reverse
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#'
+#'
 
-corazon_gradient <- function(element = "body", direction = "right", colorName = "LIFE", txtColor = "#272822", reverse = F) {
+corazon_gradient <- function(element = "body", direction = "right", colorName = "LIFE", txtColor = "#F2F2F2") {
 
 
     grad <- corazon::gradient
 
-    grad <- unique()
+    colorName <- grad[grad$g_name == colorName, ]
 
-    grad[grad$g_name == "GOLD", ]
+    colorName <- colorName[colorName != ""]
 
-
+    colorName <- as.character(colorName)[-1]
 
     direction <- switch( direction,
 
@@ -48,11 +62,8 @@ corazon_gradient <- function(element = "body", direction = "right", colorName = 
             paste0(colorName, collapse = ","), ");color:", txtColor, ";}", collapse = ""))))
 
 
+}
 
 
 
 
-
-
-
-  }
