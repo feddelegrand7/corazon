@@ -18,13 +18,12 @@
 
 #' Display a linear gradient color within shiny elements
 #'
-#' @param element
-#' @param direction
-#' @param colorName
-#' @param txtColor
-#' @param reverse
+#' @param element in which shiny element should the corazon_gradient function be applied ? Defaults to "body"
+#' @param direction the direction of the gradient, between "right", "left", "bottom", "top". Defaults to "right"
+#' @param colorName the name of the gradient to apply. see <https://www.colorffy.com/gradients/catalog>
+#' @param txtColor the text color. Default to "#F2F2F2" (white)
 #'
-#' @return
+#' @return A linear gradient color applied on a specific shiny element
 #' @export
 #'
 #' @examples
