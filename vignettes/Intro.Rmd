@@ -1,17 +1,20 @@
 ---
-output: github_document
+title: "Intro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  comment = "#>"
 )
 ```
+
+
 
 # corazon
 
@@ -56,7 +59,7 @@ shinyApp(ui = ui, server = server)
 
 ```
 
-![](man/figures/corazon_example1.png)
+![](../man/figures/corazon_example1.png)
 
 How do you find the gradient colors' names ? 
 
@@ -91,7 +94,7 @@ shinyApp(ui = ui, server = server)
 ```
 
 
-![](man/figures/corazon_example2.png)
+![](../man/figures/corazon_example2.png)
 
 
 Finally, you can apply different gradients to different shiny elements: 
@@ -122,34 +125,5 @@ shinyApp(ui = ui, server = server)
 ```
 
 
-![](man/figures/corazon_example3.png)
-
-
-## Code of Conduct
-
-Please note that the `corazon` project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html) and made with `r emo::ji("heart")`. By contributing to this project, you agree to abide by its terms.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![](../man/figures/corazon_example3.png)
 

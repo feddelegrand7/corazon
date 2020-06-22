@@ -18,35 +18,95 @@ install.packages("remotes")  # If not installed
 remotes::install_github("feddelegrand7/corazon")
 ```
 
-## Example
+## Examples
 
-This is a basic example which shows you how to solve a common problem:
+By default `corazon` applies the color gradient on the body of your
+shiny app:
 
 ``` r
+library(shiny)
 library(corazon)
-## basic example code
+
+ui <- fluidPage(
+
+corazon_gradient(colorName = "PINEAPPLE", txtColor = "#1ED760"),
+
+h1("This is a Title"),
+
+)
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+![](man/figures/corazon_example1.png)
+
+How do you find the gradient colors’ names ?
+
+  - You can run `available_gradients()`: this will return a data frame
+    of the available gradient colors’ names along with their respective
+    hex codes.
+
+  - You can visit the
+    [colorffy](https://www.colorffy.com/gradients/catalog) website where
+    you can find a catalog of the gradient colors. Just copy the names
+    and paste them within the `corazon_gradient()` function.
+
+You can incorporate gradients within any shiny element. You just need to
+prefix the shiny element’s Id with a `#`
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+library(shiny)
+library(corazon)
+
+ui <- fluidPage(
+
+corazon_gradient(element = "#txt", colorName = "PEACH", txtColor = "#4E5C68"), # don't forget to prefix the id wih the # 
+
+h1("This is a Title"),
+
+textAreaInput(inputId = "txt", label = "This is textAreaInput ", height = "500px", width = "500px")
+
+
+)
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
+![](man/figures/corazon_example2.png)
 
-You can also embed plots, for example:
+Finally, you can apply different gradients to different shiny elements:
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+``` r
+library(shiny)
+library(corazon)
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+ui <- fluidPage(
+
+corazon_gradient(colorName = "COOL", txtColor = "white"),  
+corazon_gradient(element = "#txt", colorName = "SANGRIA WINE", txtColor = "#4E5C68"),  
+
+h1("This is a Title"),
+
+textAreaInput(inputId = "txt", label = "This is textAreaInput ", height = "500px", width = "500px")
+
+
+)
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
+```
+
+![](man/figures/corazon_example3.png)
+
+## Code of Conduct
+
+Please note that the `corazon` project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html)
+and made with ❤️. By contributing to this project, you agree to abide by
+its terms.
