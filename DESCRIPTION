@@ -1,5 +1,5 @@
 Package: corazon
-Title: What the Package Does (One Line, Title Case)
+Title: Apply 'colorffy' Color Gradients Within 'shiny' Elements
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Mohamed El Fodil",
@@ -10,15 +10,16 @@ Authors@R:
              family = "Haned", 
              email = "Haned.hadjer.enssea@gmaail.com", 
              role = c("ctb")))
-Description: What the package does (one paragraph).
+Description: Allows the user to apply nice color gradients to 'shiny' elements.
+    The gradients are extracted from the 'colorffy' website. See <https://www.colorffy.com/gradients/catalog>
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Imports: 
-    stringi,
-    htmltools,
-    glue
+    htmltools
 Depends: 
     R (>= 2.10)
+URL: https://github.com/feddelegrand7/corazon
+BugReports: https://github.com/feddelegrand7/corazon/issues
