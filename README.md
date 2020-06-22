@@ -24,7 +24,7 @@ remotes::install_github("feddelegrand7/corazon")
 
 ## Examples
 
-# IMPORTANT: The gradients won’t be applied if you live your shiny application empty \!\!\!
+# IMPORTANT: The gradients won’t be applied if you leave your shiny application empty \!\!\!
 
 By default `corazon` applies the color gradient on the body of your
 shiny app:
