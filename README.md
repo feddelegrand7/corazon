@@ -60,20 +60,47 @@ How do you find the gradient colors’ names ?
     you can find a catalog of the gradient colors. Just copy the names
     and paste them within the `corazon_gradient()` function.
 
-You can incorporate gradients within any shiny element. You just need to
-prefix the shiny element’s Id with a `#`
+You can incorporate gradients within many (not all) shiny element. You
+just need to prefix the shiny element’s Id with a `#`:
 
 ``` r
 library(shiny)
 library(corazon)
 
 ui <- fluidPage(
+corazon_gradient(colorName = "LOVE"),
+corazon_gradient(element = "#txt", colorName = "PEACH", txtColor = "#4E5C68"),
+corazon_gradient(element = "#txt2", colorName = "ROYAL", txtColor = "#4E5C68"), 
+corazon_gradient(element = "#btn", colorName = "COOL", txtColor = "#4E5C68"), 
+corazon_gradient(element = "#dbtn", colorName = "JUICE", txtColor = "#4E5C68"),
+corazon_gradient(element = "#ninp", colorName = "CYBER", txtColor = "#4E5C68"),
+corazon_gradient(element = "#date", colorName = "MELOCOTON", txtColor = "#4E5C68"),
 
-corazon_gradient(element = "#txt", colorName = "PEACH", txtColor = "#4E5C68"), # don't forget to prefix the id wih the # 
+
+
 
 h1("This is a Title"),
 
-textAreaInput(inputId = "txt", label = "This is textAreaInput ", height = "500px", width = "500px")
+textAreaInput(inputId = "txt", 
+              label = "This is textAreaInput ",
+              height = "300px",
+              width = "300px"),
+
+textInput(inputId = "txt2", label = "This is a textInput"), 
+
+actionButton(inputId = "btn", label = "this is an actionButton"), 
+
+downloadButton(outputId = "dbtn", label = "This is a downloadButton"),
+
+br(), br(),
+
+numericInput(inputId = "ninp", label = "This is a numericInput", 
+             min = 0, max = 100, value = 10, step = 1), br(), 
+
+shiny::dateInput(inputId = "date", label = "This is a dateInput")
+
+
+
 
 
 )
@@ -84,31 +111,6 @@ shinyApp(ui = ui, server = server)
 ```
 
 ![](man/figures/corazon_example2.png)
-
-You can apply different gradients to different shiny elements:
-
-``` r
-library(shiny)
-library(corazon)
-
-ui <- fluidPage(
-
-corazon_gradient(colorName = "COOL", txtColor = "white"),  
-corazon_gradient(element = "#txt", colorName = "SANGRIA WINE", txtColor = "#4E5C68"),  
-
-h1("This is a Title"),
-
-textAreaInput(inputId = "txt", label = "This is textAreaInput ", height = "500px", width = "500px")
-
-
-)
-
-server <- function(input, output) {}
-
-shinyApp(ui = ui, server = server)
-```
-
-![](man/figures/corazon_example3.png)
 
 ## Code of Conduct
 
