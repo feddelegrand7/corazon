@@ -5,7 +5,8 @@
 
 `corazon` allows you to incorporate easily
 [colorffy](https://www.colorffy.com/gradients/catalog) gradient colors
-within Shiny elements.
+within Shiny elements though it is principally designed for the app’s
+body.
 
 ![](man/figures/corazon.jpg)
 
@@ -84,7 +85,7 @@ shinyApp(ui = ui, server = server)
 
 ![](man/figures/corazon_example2.png)
 
-Finally, you can apply different gradients to different shiny elements:
+You can apply different gradients to different shiny elements:
 
 ``` r
 library(shiny)
