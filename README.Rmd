@@ -87,8 +87,7 @@ corazon_gradient(element = "#btn", colorName = "COOL", txtColor = "#4E5C68"),
 corazon_gradient(element = "#dbtn", colorName = "JUICE", txtColor = "#4E5C68"),
 corazon_gradient(element = "#ninp", colorName = "CYBER", txtColor = "#4E5C68"),
 corazon_gradient(element = "#date", colorName = "MELOCOTON", txtColor = "#4E5C68"),
-
-
+corazon_gradient(element = "#navbar", colorName = "LANDSCAPE", txtColor = "#4E5C68"),
 
 
 h1("This is a Title"),
@@ -109,7 +108,8 @@ br(), br(),
 numericInput(inputId = "ninp", label = "This is a numericInput", 
              min = 0, max = 100, value = 10, step = 1), br(), 
 
-shiny::dateInput(inputId = "date", label = "This is a dateInput")
+shiny::dateInput(inputId = "date", label = "This is a dateInput"), 
+
 
 
 
@@ -126,10 +126,61 @@ shinyApp(ui = ui, server = server)
 
 ![](man/figures/corazon_example2.png)
 
+You can also use `corazon` in other shiny packages. In this example, we applied color gradients into some `shinydashboard` elements using their classes:
 
 
 
 
+```{r, eval = FALSE}
+
+library(shinydashboard)
+library(corazon)
+
+ui <- dashboardPage(
+  
+  
+  dashboardHeader(title = "Basic dashboard"),
+  dashboardSidebar(),
+  dashboardBody(  
+    corazon_gradient(element = ".box", colorName = "HUMMINGBIRD"),
+    corazon_gradient(element = ".info-box", colorName = "VALENTINE'SDAY"),
+    corazon_gradient(element = ".inner", colorName = "VALENTINE'SDAY"),
+    fluidRow(
+      box(title = "This is a box !", 
+          width = 6, 
+          plotOutput(outputId = "plot1")
+        ),
+
+      box(
+        title = "This is another box", 
+        width = 6
+      )
+    ), 
+    
+    infoBox(
+      title = "This is an info box ! ", 
+      value = "some text goes here", 
+      width = 6),
+    
+    valueBox("This is a valueBox", subtitle = "some text goes here")
+  )
+)
+
+server <- function(input, output) {
+  
+  output$plot1 <- renderPlot({
+    
+    hist(mtcars$mpg)
+    
+  })
+}
+
+shinyApp(ui, server)
+
+
+
+```
+![](man/figures/corazon_example4.png)
 
 
 
