@@ -3,6 +3,14 @@
 
 # corazon
 
+<!-- badges: start -->
+
+![CRAN status](https://www.r-pkg.org/badges/version/corazon)
+
+![](http://cranlogs.r-pkg.org/badges/grand-total/corazon?color=blue)
+
+<!-- badges: end -->
+
 `corazon` allows you to incorporate easily
 [colorffy](https://www.colorffy.com/gradients/catalog) gradient colors
 within Shiny elements though it is principally designed for the app’s
@@ -13,6 +21,13 @@ body.
 ![](man/figures/corazon2.png)
 
 ## Installation
+
+You can install the `corazon` package from CRAN with:
+
+``` r
+
+install.packages("corazon")
+```
 
 You can install the development version of `corazon` from Github with:
 

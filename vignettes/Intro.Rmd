@@ -23,6 +23,14 @@ knitr::opts_chunk$set(
 
 ## Installation
 
+You can install the `corazon` package from CRAN with: 
+
+```{r, eval=FALSE}
+
+install.packages("corazon")
+
+```
+
 You can install the development version of `corazon` from Github with: 
 
 ```{r, eval=FALSE}
