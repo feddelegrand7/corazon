@@ -5,11 +5,23 @@
 
 <!-- badges: start -->
 
-![CRAN status](https://www.r-pkg.org/badges/version/corazon)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/corazon)](https://cran.r-project.org/package=corazon)
 
-![](http://cranlogs.r-pkg.org/badges/grand-total/corazon?color=blue)
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/corazon)](https://cran.r-project.org/package=corazon)
 
-<a href="https://www.buymeacoffee.com/Fodil" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/corazon)](https://cran.r-project.org/package=corazon)
+
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/corazon)](https://cran.r-project.org/package=corazon)
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+
+[![Travis build
+status](https://travis-ci.com/feddelegrand7/corazon.svg?branch=master)](https://travis-ci.com/feddelegrand7/corazon)
+
+[![R
+badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-yellow)](https://github.com/feddelegrand7/corazon)
 
 <!-- badges: end -->
 
