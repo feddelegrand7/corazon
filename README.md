@@ -6,20 +6,12 @@
 <!-- badges: start -->
 
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/corazon)](https://cran.r-project.org/package=corazon)
-
 [![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/corazon)](https://cran.r-project.org/package=corazon)
-
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/corazon)](https://cran.r-project.org/package=corazon)
-
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/corazon)](https://cran.r-project.org/package=corazon)
-
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
-
-[![Travis build
-status](https://travis-ci.com/feddelegrand7/corazon.svg?branch=master)](https://travis-ci.com/feddelegrand7/corazon)
-
 [![R
 badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-yellow)](https://github.com/feddelegrand7/corazon)
 
@@ -30,23 +22,21 @@ badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-yellow)](https://
 within Shiny elements though it is principally designed for the app’s
 body.
 
-![](man/figures/corazon.jpg)
+<img src = "man/figures/corazon.jpg" height = 400px width = 400px>
 
-![](man/figures/corazon2.png)
+<img src = "man/figures/corazon2.png" height = 400px width = 400px>
 
 ## Installation
 
 You can install the `corazon` package from CRAN with:
 
 ``` r
-
 install.packages("corazon")
 ```
 
 You can install the development version of `corazon` from Github with:
 
 ``` r
-
 install.packages("remotes")  # If not installed 
 
 remotes::install_github("feddelegrand7/corazon")
@@ -54,7 +44,7 @@ remotes::install_github("feddelegrand7/corazon")
 
 ## Examples
 
-# IMPORTANT: The gradients won’t be applied if you leave your shiny application empty \!\!\!
+# IMPORTANT: The gradients won’t be applied if you leave your shiny application empty !!!
 
 By default `corazon` applies the color gradient on the body of your
 shiny app:
@@ -80,11 +70,11 @@ shinyApp(ui = ui, server = server)
 
 How do you find the gradient colors’ names ?
 
-  - You can run `available_gradients()`: this will return a data frame
+-   You can run `available_gradients()`: this will return a data frame
     of the available gradient colors’ names along with their respective
     hex codes.
 
-  - You can visit the
+-   You can visit the
     [colorffy](https://www.colorffy.com/gradients/catalog) website where
     you can find a catalog of the gradient colors. Just copy the names
     and paste them within the `corazon_gradient()` function.
@@ -146,7 +136,6 @@ applied color gradients into some `shinydashboard` elements using their
 classes:
 
 ``` r
-
 library(shinydashboard)
 library(corazon)
 
