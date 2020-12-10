@@ -14,7 +14,8 @@ downloads](https://cranlogs.r-pkg.org/badges/grand-total/corazon)](https://cran.
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 [![R
 badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-yellow)](https://github.com/feddelegrand7/corazon)
-
+[![R build
+status](https://github.com/feddelegrand7/corazon/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/corazon/actions)
 <!-- badges: end -->
 
 `corazon` allows you to incorporate easily
@@ -23,8 +24,6 @@ within Shiny elements though it is principally designed for the app’s
 body.
 
 <img src = "man/figures/corazon.jpg" height = 400px width = 400px>
-
-<img src = "man/figures/corazon2.png" height = 400px width = 400px>
 
 ## Installation
 
@@ -44,7 +43,7 @@ remotes::install_github("feddelegrand7/corazon")
 
 ## Examples
 
-# IMPORTANT: The gradients won’t be applied if you leave your shiny application empty !!!
+### IMPORTANT: The gradients won’t be applied if you leave your shiny application empty !!!
 
 By default `corazon` applies the color gradient on the body of your
 shiny app:
